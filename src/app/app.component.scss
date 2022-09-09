@@ -1,0 +1,44 @@
+div.container{
+    width: 100%;
+    min-width: 800px;
+    >h4 {
+        text-transform: uppercase;
+        text-align: center;
+        margin: 1em 0;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        >div:first-child{
+            display: flex;
+            flex-direction: row;
+            input {
+                font-size: 1em;
+                padding: .5em;
+                font-size: .95em;
+                width: 100%;
+            }
+            button {
+                padding: .5em;
+                font-size: .89em;
+            }
+            button,input {
+                padding: .5em;
+                border-radius: .3em;
+                border: 1px solid #CCC;
+            }
+        }
+        >div:last-child{
+            margin-top: .5em;
+            span{
+                color: #9f4949;
+                font-size: .99em;
+                text-indent: .4em;
+            }
+        }
+    }
+
+    div.result > h3{
+        margin: 1em 0;
+    }
+}

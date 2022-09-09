@@ -1,0 +1,42 @@
+div.card{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    border-radius: .3em;
+    border: 1px solid #CCC;
+    header{
+        background-color: #ebebeb;
+        padding: 0.8em;
+        border-radius: .3em;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        li {
+            list-style: none;
+            margin: 1em 0;
+            text-indent: .5em;
+            span{
+                color: #ff0000;
+                font-weight: bold;
+            }
+        }
+        >div:first-child{
+            display: flex;
+            flex-direction: row;
+            >div {
+                width: 50%;
+            }
+        }
+        >div:last-child{
+            display: flex;
+            justify-content: center;
+            background-color: #f7f7f7;
+            padding: 0.4em 0;
+            label {   
+                font-size: 0.9em;
+            }
+        }
+
+    }
+}

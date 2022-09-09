@@ -1,0 +1,31 @@
+<div class="card">
+    <header>
+        <h3>{{person.nombre}} {{person.apellido}}</h3>
+    </header>
+    <section>
+        <div>
+            <div>
+                <ul>
+                    <li>
+                        RUT: {{person.rut}} 
+                        <span *ngIf="!person.validRut">(Rut invalido)</span>
+                    </li>
+                    <li>
+                        Fecha de nacimiento: {{person.fechaNacimiento}} 
+                        <span *ngIf="!person.validFechaNacimiento">(Fecha invalida)</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Telefono: {{person.telefono}}</li>
+                    <li>Direccion: {{person.direccion.calle}}, {{person.direccion.numero}} - {{person.direccion.comuna}}</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <label *ngIf="person.activo == 1">Activo</label>
+            <label *ngIf="person.activo == 0">Inactivo</label>
+        </div>
+    </section>
+</div>
