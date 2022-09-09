@@ -15,6 +15,11 @@ export class AppComponent {
   constructor(private personService: PersonService) {}
 
   find(searchForm:NgForm) {
+    if (!searchForm.value.name.length) {
+      searchForm.form.controls['name'].markAsTouched();
+      return
+    }
+
     this.personService.getData()
       .subscribe((data:IPerson[]) => {
         let persons:IPerson[] = this.personService.find(data, searchForm.value.name);
